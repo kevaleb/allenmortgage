@@ -1,0 +1,51 @@
+---
+layout: default
+navclass: shop
+navtitle: Shop
+---
+{% for item in page.gallery %}
+	{% if forloop.last %}
+		{% capture primaryimage %}{{ item.image_path }}{% endcapture %}
+	{% endif %}
+{% endfor %}
+
+<div class="banner productbanner">
+	<img src="{{ primaryimage }}" alt="Hand Tailored {{ page.brand }} {{ page.color }} {{ page.collar }} Dress Shirt" />
+	<hgroup>
+		<h1 data-ava="{{ page.ava }}">{{ page.design }}</h1>
+		<h3>{{ page.material }} ::: {{ page.color }}</h3>
+		<h2>{{ page.price }}</h2>
+		<a href="#"
+			style="display: inline-block;"
+		    class="snipcart-add-item button red"
+		    data-item-id="{{ page.sku }}"
+		    data-item-name="{{ page.brand }} Cuff Links"
+		    data-item-price="{{ page.price }}"
+		    data-item-weight="1"
+		    data-item-url="{{ page.url }}"
+		    data-item-description="Carved from real wood"
+		>Add To Cart</a>
+	</hgroup>
+</div>
+
+{% include gallery.html %}
+
+<script type="text/javascript">
+	jQuery(document).ready(function() {		
+		$('#snipcart').data('cart-custom2-value',persistentQueryString['utm-campaign']);
+		$('#snipcart').data('cart-custom3-value',persistentQueryString['utm-source']);
+		$('#snipcart').data('cart-custom4-value',persistentQueryString['utm-medium']);
+		$('#snipcart').data('cart-custom5-value',persistentQueryString['utm-content']);
+		$('#snipcart').data('cart-custom6-value',persistentQueryString['utm-term']);
+	});
+	
+	
+	// Snipcart Custom Thank You Page
+	Snipcart.execute('bind', 'order.completed', function (order) {
+		var url = '/thankyou?order=' + order.token + '&orderid=' + order.invoiceNumber;
+		window.location.href = url;
+	});
+
+	
+</script>
+

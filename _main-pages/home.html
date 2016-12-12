@@ -1,0 +1,84 @@
+---
+layout: default
+title: Free Mortgage Review
+description:
+navtitle: Mortgage Review
+navclass: /
+permalink: /
+---
+
+<div class="banner two-column" style="background-image: url(/images/banners/stock5.jpg);">
+	<hgroup>
+		<h1>Free Mortgage Review</h1>
+		<ul>
+			<li><i class="fa fa-check-circle-o" aria-hidden="true"></i>Lower Your Monthly Payment</li>
+			<li><i class="fa fa-check-circle-o" aria-hidden="true"></i>Pay your house off faster</li>
+			<li><i class="fa fa-check-circle-o" aria-hidden="true"></i>Skip a few payments</li>
+		</ul>
+	</hgroup>
+	
+	<section id="mortgage-review-form" class="">
+		<form method="post" action="">
+			<label for="">
+				<span>Name</span>
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input type="text" name="name" value="" placeholder="John Doe"/>
+			</label>
+			<label for="">
+				<span>Email</span>
+				<i class="fa fa-envelope" aria-hidden="true"></i>
+				<input type="text" name="email" value="" placeholder="someone@someplace.com"/>
+			</label>
+			<label for="" class="phone">
+				<span>Phone</span>
+				<i class="fa fa-phone" aria-hidden="true"></i>
+				<input type="text" name="" value="" placeholder="(123) 456-7890"/>
+			</label>
+			
+			<label class="date">
+				<span>Date</span>
+				<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+				<input type="text" id="date" />
+			</label>
+			<label class="time">
+				<span>Time</span>
+				<i class="fa fa-clock-o" aria-hidden="true"></i>
+				<input name="mortgage-review-time" type="text" value="" id="time" />
+			</label>
+			
+			<label>
+				<span>Preference</span>
+				<div class="selected now">Call Me Now</div>
+				<div class="datetime">Date/Time</div>
+				<div class="email">Just Email Me</div>
+			</label>
+			
+			<button class="button">Send My Free Mortgage Review</button>
+		</form>
+	</section>
+</div>
+
+<script type="text/javascript">
+	$('#date').dateDropper();
+	$('#time').timeDropper();
+	
+	$( "#mortgage-review-form > form > label > div" ).click(function() {	
+		$('#mortgage-review-form > form > label > div.selected').removeClass('selected');
+		$(this).addClass('selected');
+	});
+	
+	$( "#mortgage-review-form > form > label > div.datetime" ).click(function() {	
+		$('#mortgage-review-form').removeClass();
+		$('#mortgage-review-form').addClass('datetime');
+	});
+	
+	$( "#mortgage-review-form > form > label > div.email" ).click(function() {	
+		$('#mortgage-review-form').removeClass();
+		$('#mortgage-review-form').addClass('email');
+	});
+	
+	$( "#mortgage-review-form > form > label > div.now" ).click(function() {	
+		$('#mortgage-review-form').removeClass();
+	});
+</script>
+

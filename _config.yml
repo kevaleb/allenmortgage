@@ -1,0 +1,7 @@
+name: Allen Mortgage
+version: 3.0.3
+permalink: pretty
+excerpt_separator: ///
+collections:
+  main-pages:
+    output: true

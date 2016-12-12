@@ -1,0 +1,10 @@
+<nav>
+	<!--<a href="/" {% if page.navlcass == home %}class="selected"{% endif %}>Shop</a>-->
+	<a href="http://allenmortgage.com/">Home</a>
+	<a href="http://allenmortgage.com/about.php">About Us</a>
+	<a href="http://allenmortgage.com/contact.php	">Contact Us</a>
+	{% assign navitems = site.main-pages | sort: 'navorder'  %}
+	{% for item in navitems %}
+	<a href="{{ item.url }}" {% if page.url == item.navclass %}class="selected"{% endif %}>{{ item.navtitle }}</a>
+	{% endfor %}
+</nav>
