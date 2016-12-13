@@ -18,7 +18,11 @@ permalink: /
 	</hgroup>
 	
 	<section id="mortgage-review-form" class="">
-		<form method="post" action="">
+		<form method="post" action="/thankyou/">
+			<input type="hidden" name="_to" value="kevin@truetakemedia.com">
+			<input type="hidden" name="_subject" value="New Request: Free Mortgage Review" />
+			<input type="text" name="_gotcha" style="display: none;">
+			
 			<label for="">
 				<span>Name</span>
 				<i class="fa fa-user" aria-hidden="true"></i>
@@ -53,7 +57,7 @@ permalink: /
 				<div class="email">Just Email Me</div>
 			</label>
 			
-			<button class="button">Send My Free Mortgage Review</button>
+			<button class="button">Get My Free Mortgage Review</button>
 		</form>
 	</section>
 </div>
