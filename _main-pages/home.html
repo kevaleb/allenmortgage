@@ -26,17 +26,17 @@ permalink: /
 			<label for="">
 				<span>Name</span>
 				<i class="fa fa-user" aria-hidden="true"></i>
-				<input type="text" name="name" value="" placeholder="John Doe"/>
+				<input type="text" name="name" value="" placeholder="Full Name" required/>
 			</label>
 			<label for="">
 				<span>Email</span>
 				<i class="fa fa-envelope" aria-hidden="true"></i>
-				<input type="text" name="email" value="" placeholder="someone@someplace.com"/>
+				<input type="email" name="email" value="" placeholder="Email" required/>
 			</label>
 			<label for="" class="phone">
 				<span>Phone</span>
 				<i class="fa fa-phone" aria-hidden="true"></i>
-				<input type="text" name="phone" value="" placeholder="(123) 456-7890"/>
+				<input type="phone" name="phone" value="" placeholder="Phone #" id="phone" required/>
 			</label>
 			
 			<label class="date">
@@ -74,29 +74,23 @@ permalink: /
 	$( "#mortgage-review-form > form > label > div.datetime" ).click(function() {	
 		$('#mortgage-review-form').removeClass();
 		$('#mortgage-review-form').addClass('datetime');
+		$('input#phone').attr('required','required');
 	});
 	
 	$( "#mortgage-review-form > form > label > div.email" ).click(function() {	
 		$('#mortgage-review-form').removeClass();
 		$('#mortgage-review-form').addClass('email');
+		$('input#phone').removeAttr('required');
 	});
 	
 	$( "#mortgage-review-form > form > label > div.now" ).click(function() {	
 		$('#mortgage-review-form').removeClass();
+		$('input#phone').attr('required','required');
 	});
 </script>
 
-
-
-
-
-<form method="post" action="/thankyou/">
-  <label>Email Address</label>
-  <input type="text" name="email">
-
-  <input type="hidden" name="_to" value="kevin@truetakemedia.com">
-  <input type="text" name="_gotcha" style="display: none;">
-
-  <input type="submit" value="Send Message">
-</form>
-
+<script>
+$(document).ready(function() {
+	$("#mortgage-review-form > form").validate();
+});
+</script>

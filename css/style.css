@@ -832,11 +832,14 @@ hgroup.video {
 }
 
 @media all and (max-width: 720px) {
-	.banner.two-column > section,
+	
 	.banner.two-column > hgroup {
 		display: block;
 		max-width: none;
 		text-align: center;
+	}
+	.banner.two-column > section {
+		
 	}
 }
 
@@ -1462,12 +1465,36 @@ section.measure {
 	
 }
 #mortgage-review-form > form > label {
+	position: relative;
 	display: block;
 	margin: 0 0 18px 0;
 	text-align: center;
 }
 #mortgage-review-form > form > label:last-of-type {
 	margin: 0;
+}
+#mortgage-review-form > form > label > label.error {
+	position: relative;
+	display: block;
+	width: 96%;
+	margin: 3px auto 0 auto;
+	padding: 6px;
+	background: #c52d1d;
+	text-transform: uppercase;
+	font: 200 10px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 1px;
+}
+#mortgage-review-form > form > label > label.error:before {
+	content: '\00a0';
+	position: absolute;
+	top: -4px;
+	left: 50%;
+	width: 8px;
+	height: 8px;
+	margin: 0 0 0 -4px;
+	background: #c52d1d;
+	transform: rotate(45deg);
+	
 }
 
 #mortgage-review-form > form > label > span {
@@ -1490,7 +1517,7 @@ section.measure {
 	vertical-align: middle;
 }
 #mortgage-review-form > form > label > input {
-	width: 320px;
+	width: 100%;
 	padding: 6px 12px 6px 36px;
 	border: 2px solid #fff;
 	border-radius: 4px;
