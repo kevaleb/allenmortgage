@@ -39,6 +39,13 @@ permalink: /
 				<input type="phone" name="phone" value="" placeholder="Phone #" id="phone" required/>
 			</label>
 			
+			<label>
+				<span>Preference</span>
+				<!--<div class="selected now">Call Me Now</div>-->
+				<div class="datetime"><span></span>Schedule A Call</div>
+				<div class="email"><span></span>Just Email Me</div>
+			</label>
+			
 			<label class="date">
 				<span>Date</span>
 				<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
@@ -50,12 +57,7 @@ permalink: /
 				<input name="mortgage-review-time" type="text" value="" id="time" />
 			</label>
 			
-			<label>
-				<span>Preference</span>
-				<div class="selected now">Call Me Now</div>
-				<div class="datetime">Date/Time</div>
-				<div class="email">Just Email Me</div>
-			</label>
+			
 			
 			<button class="button">Get My Free Mortgage Review</button>
 		</form>
@@ -66,26 +68,25 @@ permalink: /
 	$('#date').dateDropper();
 	$('#time').timeDropper();
 	
-	$( "#mortgage-review-form > form > label > div" ).click(function() {	
-		$('#mortgage-review-form > form > label > div.selected').removeClass('selected');
-		$(this).addClass('selected');
-	});
-	
 	$( "#mortgage-review-form > form > label > div.datetime" ).click(function() {	
-		$('#mortgage-review-form').removeClass();
-		$('#mortgage-review-form').addClass('datetime');
+		$('#mortgage-review-form > form > label > div.email.selected').removeClass('selected');
+		$('#mortgage-review-form').removeClass('email');
+		$('#mortgage-review-form').toggleClass('datetime');
+		$(this).toggleClass('selected');
 		$('input#phone').attr('required','required');
 	});
 	
-	$( "#mortgage-review-form > form > label > div.email" ).click(function() {	
-		$('#mortgage-review-form').removeClass();
-		$('#mortgage-review-form').addClass('email');
-		$('input#phone').removeAttr('required');
-	});
-	
-	$( "#mortgage-review-form > form > label > div.now" ).click(function() {	
-		$('#mortgage-review-form').removeClass();
-		$('input#phone').attr('required','required');
+	$( "#mortgage-review-form > form > label > div.email" ).click(function() {
+		$('#mortgage-review-form > form > label > div.datetime.selected').removeClass('selected');
+		$('#mortgage-review-form').removeClass('datetime');
+		$('#mortgage-review-form').toggleClass('email');
+		$(this).toggleClass('selected');
+		
+		if ($('input#phone').attr('required')) {
+		        $('input#phone').removeAttr('required');
+		    } else {
+		        $('input#phone').attr('required','required');
+		    }
 	});
 </script>
 

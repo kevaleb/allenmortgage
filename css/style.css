@@ -1537,15 +1537,45 @@ section.measure {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	cursor: pointer;
+	vertical-align: middle;
+	white-space: nowrap;
 }
 #mortgage-review-form > form > label > div:hover {
 	border-color: rgba(255,255,255,.5);
 	color: #fff;
 }
+#mortgage-review-form > form > label > div > span {
+	display: inline-block;
+	position: relative;
+	top: -1px;
+	width: 14px;
+	height: 14px;
+	margin: 0 6px 0 0;
+	border: 2px solid rgba(255,255,255,.5);
+	border-radius: 3px;
+	vertical-align: middle;
+}
+#mortgage-review-form > form > label > div > span:before {
+	display: none;
+	content: '\2713';
+	position: relative;
+	left: 0px;
+	top: -1px;
+	font: 100 18px/8px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+
 #mortgage-review-form > form > label > div.selected {
-	border: 2px solid #fff;
+	/*border: 2px solid #fff;*/
 	color: #fff;
 }
+#mortgage-review-form > form > label > div.selected > span {
+	border-color: #fff;
+}
+#mortgage-review-form > form > label > div.selected > span:before {
+	display: inline-block;
+}
+	
 
 #mortgage-review-form > form > button {
 	display:block;
