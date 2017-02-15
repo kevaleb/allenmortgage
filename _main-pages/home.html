@@ -24,6 +24,11 @@ permalink: /
 			<input type="hidden" name="_to" value="kevin@truetakemedia.com">
 			<input type="hidden" name="_subject" value="New Request: Free Mortgage Review" />
 			<input type="text" name="_gotcha" style="display: none;">
+			<input id="utm_source" type="hidden" name="utm_source" value="" />
+			<input id="utm_medium" type="hidden" name="utm_medium" value="" />
+			<input id="utm_campaign" type="hidden" name="utm_campaign" value="" />
+			<input id="utm_term" type="hidden" name="utm_term" value="" />
+			<input id="utm_content" type="hidden" name="utm_content" value="" />
 			
 			<label for="">
 				<span>Name</span>
@@ -67,6 +72,9 @@ permalink: /
 </div>
 
 <script type="text/javascript">
+	
+	
+	
 	$('#date').dateDropper();
 	$('#time').timeDropper();
 	
@@ -90,10 +98,26 @@ permalink: /
 		        $('input#phone').attr('required','required');
 		    }
 	});
+	
+	$( "input#waist").change(function() {
+	  var waist = $('input#waist').val();
+	  $('.snipcart-add-item').data('item-custom2-value',waist);
+	  localStorage["ccs-waist-measurement"] = jQuery("input#waist").val();
+	});
+	
+	
+	
+	$(document).ready(function() {
+		$("#mortgage-review-form > form").validate();
+		
+		$('input#utm_source').val(persistentQueryString['utm_source']);
+		$('input#utm_medium').val(persistentQueryString['utm_medium']);
+		$('input#utm_campaign').val(persistentQueryString['utm_campaign']);
+		$('input#utm_term').val(persistentQueryString['utm_term']);
+		$('input#utm_content').val(persistentQueryString['utm_content']);
+	});
 </script>
 
 <script>
-$(document).ready(function() {
-	$("#mortgage-review-form > form").validate();
-});
+
 </script>
