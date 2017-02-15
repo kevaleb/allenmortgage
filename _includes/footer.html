@@ -1,17 +1,49 @@
 <footer>
 	<div>
-		<a href="/"><img src="/images/logos/logo.png" alt="Custom Cut Shirts Logo" class="footer-logo"/><span>Custom Cut Shirts</span></a>
-		<section class="social">
+		<a href="/"><img src="/images/logos/logo.png" alt="Custom Cut Shirts Logo" class="footer-logo"/></a>
+		<!--<section class="social">
 			<a href="https://www.facebook.com/customcutshirts/"><span class="fa fa-facebook-official"></span></a>
 			<a href="https://www.instagram.com/customcutshirts/"><span class="fa fa-instagram"></span></a>
 			<a href="https://www.pinterest.com/customcutshirts/"><span class="fa fa-pinterest"></span></a>
 			<a href="https://twitter.com/customcutshirts"><span class="fa fa-twitter"></span></a>
-		</section>
+		</section>-->
 		
 		{% include nav.html %}
 		
-		<p><span>(435) 212-3705</span>
-		<span>kevin@customcutshirts.com</span></p>
-		<p>© Copyright 2016. Custom Cut Shirts. All Rights Reserved.</p>
+	
+		<div class="contact-info">
+			<span>
+				<!-- Phone icon by Icons8 -->
+				<img class="icon icons8-Phone" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACfElEQVRoQ+2ZjzEEMRSHf1cBKkAFqAAdUAEqQAWoABXQASpABagAFaAC5jMXs7eXzb5k95K9GZnZGTNedn9f3p+85Eaa8zGac/36ByjtwZAH1iUtGAS+SPo02M3ExAeA8BtJK8YvPkvaMNr2buYDeI0Q7wRtS3roXZ3hhT6Ab8O8usmgAIhnS+xXIY4lXSSAd57i8wChsBn55jtJO5FzejH3AVxL2ot8O15bipzTi7kP4FTSScLbqURUpKzDB7Al6T5BRZE88AEsSvpIAHiTtJowr9OUpp2YUFhLeHP2MGoCoCQeJgBk3w+aACiJtBMx410SbUjWvijUzMVsaF+SSP5BVCG36tb9oJh4hLa100+GGMoe91VNbSeytrbiQBKeKjbaAELJXPQc4FasDQC70J6wK+m22PK35IDTFWotqFRsXuzCRYbFAwgL5QIeIpGz1v+YEMKW8zFHzaZBIpPQ2YfVAwg7knQeUDiYbjS0ioMrqzEecKFEzIfOzFn3hlgAICyNHqe6M0NCcPa4GvdRlOPL2H4qBQBd++MPhzSS2ORFU3VCPCc/OtjqwB4vE67u78bbv1QAPmhp9hBCSNW71CbxoQVhr2HjnHhXFwArBHbVkEoR78Cmrm+6AsRAsIKAUI7rYWNIl1+Tx3G+/Nn3AeBWOOUqxirc2c0MwJrYsYLr9jMF4GOEBuVwuavShvkzB+C7JCmxnnKr0cadBcCJoA2n1PbpjawADoSqg0dir+x93igC4MIKEJ4uIMUAqqtJGwJIytXlIAAcDIckGkMe6w8qU2eOvjaytuph+T9JTxnmAa7+My8NHbAT5+8hAVggp2z+AZKWrcdJc++BH4yIaTFdKyX1AAAAAElFTkSuQmCC" width="48" height="48">
+				{{ site.phone }}
+			</span>
+			<span>
+				<!-- Message icon by Icons8 -->
+				<img class="icon icons8-Message" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAADEElEQVRoQ+2Z7XHUMBCG31QAdAAVJKkA6AAqIKkAqACoAKgAqIBQAVABSQVABYQKYJ4Z7c1mR2fJtnL+GO+fy1xkaR+9+yH5jrQyO1oZjzaguSu6KbQpdOAdWH3IPZP0QtLJgTd26HKXkt5J+mQTmEJ3JX1dEEjcAMAeS7o2oB8LhjE4oE4BIsTeDtV8Zs+dAxTV+S7pTNKvmTkb3bkv6aOkh+4flwD9CyMfLADGXAbqp/c/B7S0Un5DkBwQJZBSSJLN2Wgt5D+tZmc5oHuSLpKUb2YYfoTZK0mkxhNJf0pAFnKv04OoBdj1xHLRKwFBFfzBP6wYcj6H2AEqCQ8B9n4CMECeJxB8owITQWa9gHgIiZngOMGwQ7ujxi2rRn6wkUBdpRCL7aQ3ED4zIRNbAjIpkt8WGOswP5uJsQ4bmQv7QUAmBHJ/cKp8S/HMZwt7lPKET7PzFPb75h8FxKSUSwDuBLCXI0o9c3L88iC/U4iV2sdoIAtB8sofO/ieAtKn1FsJRnlvHL8oSDWVtQmQLU5eUYGiEf9dFdEql5Ve/zzPkS+11hSIRdnJz5nV2d1Y6n0J5u9oT0NJroFqDkSRiCHjHbGKyHe+cuWcJWQpAn2sKVCE+RuKRY1j8Zm+UM2AIowlst1TaMRdxnhyBQVjgekD1QQowlCyyRdvOEuI+fLO/1GE73Pj/c25Fmo0kIfhOEL+7OsV8VZZug3TjwAxdWugRgF5GMorO13TK4BmnD9U7gtHqh/zWjsoQQ0GMhhCJp54a5K/7xg76ROyXVCDgKyBfkkwNar0BciNRy0rGP4O5Mf2BkINgHKJ3MLpmjmswPCJWoOBgGGSrsSvcajFGCsYbK6HqlYICHsR0cKhVnPYCxyDqgKyk26re04rGJuHa4blVxHoNHXvQyX+UFiA6HO8+d0ZLx1oiv6YgiqcepcAxCnfXwqvVvmyHrmiSkPDYMrnOIad+B+8CLXSCXlKh7vWBobQ2/3gZYOt7ywFDJAbfWlpvzQUI2QDKm7RxAM2hSYWoLj8plBxiyYesDqF/gMvYMl65eHpvgAAAABJRU5ErkJggg==" width="52" height="52">
+				{{ site.email }}
+			</span>
+			<span>
+				<!-- Fax icon by Icons8 -->
+				<img class="icon icons8-Fax" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACJUlEQVRoQ+1Y7TFFMRA9rwJUgApQAR1QAh1QAR3QASXQARXwKkAFqIA5MzczuXm52bvZ7PBG9tedudlkz9mPbHaBNZfFmtuPDuC3Pejhge/GoIo2dgAZtrsHElLUIXQE4BbATrLRG4AzAI9CjKce0IapSj+3+WvG+GAzQez+dQBSDEuMqhickUPqEPqXAJgv1wD2M+EneSx1Qkogw/YFwAUAfo8kt7nWAzT+GcDmRG5YAYRtPwEcpCBaALgHcFxI7FYAeMQDgJP4rBYAPgrs86yWAFaqYAsAUsg1bo3GhHQAALoHlDE2ihqPEHoCcDoYdQfgMDHQ+t8dAHulcOHwjmBvFYv1vzuALQC8dCg5ANb/7gDYbrPtprAtZ3sei/W/OwBlTqqXdwBp5er3gDKI3EPIWuclfXcA1jov6bsDsNZ5Sd8dgLXOS/rNAfDW3VAmYu3y9/TN3aKZk56Utcbm9GY9KUuMrjAwMMKpgbcXvoapx2gykfMAexe2wdsJBTSebXJutMim7WY4INWzeoDnkqDzuWOVcGDthK1WrwpoaWJQa0itnjuAuD5PHcbhFscssWjHKiogpc0Zd3vRbsyL0OdPHcL+PzwnuWY55IXKKM3iEoArAJeazTJrOc9kcrtJCQDDgV6orSqsHhz2huelCwgpPmkAy6a2xrNmsxyTAFeRAPBweoLhxKGq5A2yzpuZ612ZD6zMAeDKoHXzDsDKoFV/7T3wAzjjnzFicvZqAAAAAElFTkSuQmCC" width="48" height="48">
+				{{ site.fax }}
+			</span>
+		</div>
+		
+		<div class="licenses">
+			<img src="/images/icons/ehl.gif" alt="" />
+			<a href="{{ site.fha-link }}"><strong>FHA</strong>{{ site.fha }}</a>
+			<a href="{{ site.nmls-link }}"><strong>NMLS</strong>{{ site.nmls }}</a>
+		</div>
+		<div class="state-licenses">
+			<span><strong>arizona</strong> BK-0905515</span>
+			<span><strong>georgia</strong> #20342</span>
+			<span><strong>north carolina</strong> #L-145150</span>
+			<span><strong>tennessee</strong> #1090623 </span>
+			<span><strong>texas</strong> #3147</span>
+			<span><strong>virginia</strong> #MC-5914</span>
+			<span><strong>washington</strong> #CL-3147</span>
+		</div>
+		<p>© Copyright 2016. {{ site.name }}. All Rights Reserved.</p>
+		
 	</div>
 </footer>

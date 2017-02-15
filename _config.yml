@@ -1,7 +1,22 @@
-name: Allen Mortgage
 version: 3.0.3
 permalink: pretty
 excerpt_separator: ///
+
+name: Allen Mortgage
+address: 1675 S. Central Street
+po-box: P.O. Box 3414
+city: Centennial Park
+state: az
+zip-code: 86021-1168
+phone: +1 (855) 644-6636
+fax: +1 (928) 436-2300
+email: info@allenmtg.com
+nmls: 3147
+nmls-link: http://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/3147
+
+fha: 1-7646-0000-3
+fha-link: https://www.hud.gov/ll/code/getllst.cfm?startseq=-1&called_by=llslcrit&ldrtp=05&lndrnme=Allen+Mortgage&lndrcity=&lndstate=all_states&lndrcounty=&lndrcountyCode=none&lndrzip=&ldrad=1&aafb=all_areas&groupsize=10&pbox1=on&pbox2=on&sobox1=on&sobox2=on&sobox3=on&sobox4=on&sobox5=on&sobox6=on#1
+
 collections:
   main-pages:
     output: true

@@ -445,7 +445,7 @@ header.open > .menu-button > span.three {
 	min-height: 100%;
 	/*max-width: 720px;*/
 	margin: 0 auto;
-	padding: 0 0 96px 0;
+	padding: 0 0 0px 0;
 	overflow: hidden;
 	background: #fff;
 }
@@ -466,7 +466,7 @@ header.open > .menu-button > span.three {
 	/*max-height: 720px;*/
 	min-height: 320px;
 	padding: 72px 0 0 0;
-	background: radial-gradient(ellipse farthest-corner, #333 12%, black 100%) #000;
+	background: #124664;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
@@ -476,23 +476,7 @@ header.open > .menu-button > span.three {
 }
 
 .content .banner.half {
-	height: 72%;
-	background-color: #000;
-	background-image: radial-gradient(ellipse farthest-corner, #333 24%, black 100%) #000;
-	background-attachment:scroll;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	box-shadow: 0 75px 75px rgba(0,0,0,.75) inset;
-}
-.content .banner.half > hgroup > h1 {
-	display: inline-block;
-	background: #000;
-	/*float: left;*/
-	padding: 12px 24px;
-}
-.content .banner.half.shop > hgroup > h1 {
-	padding: auto;
+	height: 50%;
 }
 
 
@@ -816,31 +800,74 @@ hgroup.video {
 /* @group Banner Two Column */
 
 .banner.two-column {
-	
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 .banner.two-column > hgroup {
+	position: relative;
 	display: inline-block;
-	max-width: 400px;
+	max-width: 480px;
 	vertical-align: middle;
 	text-align: left;
+	/*padding: 0 48px 0 0;*/
+	margin: 0 48px 0 0;
+	border: 1px solid #fff;
+	text-align: center;
 }
+.banner.two-column > hgroup > img {
+	width: 50%;
+	max-width: none;
+	margin: 24px auto;
+	
+}
+.banner.two-column > hgroup > h1 {
+	padding: 24px;
+	/*border-top: 1px solid #fff;*/
+	/*border: 1px solid #fff;*/
+	background: rgba(255,255,255,.15);
+}
+.banner.two-column > hgroup > ul {
+	/*border-bottom: 1px solid #fff;*/
+	padding: 24px 0;
+}
+
+
 .banner.two-column > section {
 	display: inline-block;
 	max-width: 400px;
 	vertical-align: middle;
 	padding: 0;
 }
+.banner.two-column > section > h2 {
+	color: #fff;
+	font: 100 30px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
 
-@media all and (max-width: 720px) {
+@media all and (max-width: 960px) {
 	
-	.banner.two-column > hgroup {
-		display: block;
-		max-width: none;
-		text-align: center;
-	}
-	.banner.two-column > section {
-		
-	}
+.banner.two-column > hgroup {
+	display: block;
+	max-width: 480px;
+	margin: 0 auto;
+	text-align: center;
+	border: none;
+}
+.banner.two-column > hgroup > ul {
+	border: none;
+}
+.banner.two-column > hgroup > h1 {
+	border: none;
+}
+.banner.two-column > hgroup > img {
+	
+}
+.banner.two-column > section {
+	display: block;
+	margin: 48px auto;
+	padding: 24px;
+}
 }
 
 
@@ -3086,7 +3113,7 @@ footer {
 	bottom: 0px;
 	left: 0;
 	padding: 48px 24px;
-	background: #000;
+	background: #f2f2f2;
 	text-align: center;
 	overflow: hidden;
 }
@@ -3097,20 +3124,21 @@ footer > div {
 footer > div > a {
 	display: block;
 	width: 100%;
-	max-width: 320px;
-	margin: 0 auto;
+	max-width: 240px;
+	margin: 0 auto 48px auto;
 	text-decoration: none;
 }
 footer > div > a > img {
 	width: 100%;
-	max-width: 72px;
+	/*max-width: 72px;*/
 }
 footer > div > a > span {
 	display: block;
 	margin: 0 0 12px 0;
-	color: #fff;
+	color: #333;
 	font: 100 18px/24px Georgia, "Times New Roman", Times, serif;
 	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 footer > div > section {
 	display: inline-block;
@@ -3158,31 +3186,105 @@ footer > div > p > span {
 
 
 footer > div > nav {
-	margin: 0 0 36px;
+	margin: 0 0 12px 0;
 }
 footer > div > nav > a {
-	padding: 0 12px;
-	font: 100  "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	padding: 0 6px;
+	font: 400 16px/16px  "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+footer > div > nav > a+a {
+	border-left: 1px solid #ccc;
 }
 footer > div > nav > a:hover {
 	color: #d64336;
 }
 
-footer > div > nav > a.snipcart-checkout {
-	display: inline-block;
+
+footer > div > .contact-info {
 	position: relative;
-	width: 48px;
-	margin: 0;
-	text-align: right;
-	white-space: nowrap;
+	max-width: 720px;
+	margin:0 auto 24px auto;
 }
-footer > div > nav > a.snipcart-checkout > i {
-	
+footer > div > .contact-info:after {
+	content: '\00a0';
+	position: absolute;
+	width: 320px;
+	height: 1px;
+	background: linear-gradient(to right, #f2f2f2 0%, #ccc 51.5%, #f2f2f2 100%) #ccc;
+	box-shadow: 0 1px #fff;
+	left: 50%;
+	bottom: -12px;
+	margin: 0 0 0 -160px;
 }
-footer > div > nav > a.snipcart-checkout > .snipcart-summary {
+footer > div > .contact-info > span {
 	display: inline-block;
+	text-align: center;
+	margin:  0 0 24px 0;
+	font: 400 16px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	opacity: .5;
+}
+footer > div > .contact-info > span > img {
+	width: 18px;
+	height: 18px;
+	margin: 0 6px 0 18px;
+	vertical-align: middle;
+}
+footer > div > .contact-info > span:first-of-type > img {
+	margin-left: 0;
+}
+
+
+
+
+footer > div > .state-licenses {
+	font: 200 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #999;
+}
+footer > div > .state-licenses > span {
+	display: inline-block;
+	padding: 12px;
+	text-align: center;
+}
+footer > div > .state-licenses > span > strong {
+	display: block;
+}
+
+
+
+
+footer > div > img {
+	display: inline-block;
+	max-width: 100px;
+}
+
+
+
+footer > div > .licenses {
+	/*max-width: 320px;*/
+	margin: 0 auto;
+	overflow: hidden;
+}
+footer > div > .licenses > img {
+	/*float: left;*/
+	max-height: 48px;
+	vertical-align: middle;
+	/*margin: 0 12px 0 0;*/
+}
+footer > div > .licenses > a {
+	display: inline-block;
+	margin: 0 24px;
+	padding: 24px 0;
+	font: 200 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	vertical-align: middle;
+	text-decoration: none;
+}
+footer > div > .licenses > a > strong {
+	display: block;
+	margin: 0 12px 0 0;
 }
 /* @end */
 
