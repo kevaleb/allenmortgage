@@ -425,7 +425,192 @@ header.open > .menu-button > span.three {
 
 
 
+/* @group FOOTER */
+footer {
+	width: 100%;
+	bottom: 0px;
+	left: 0;
+	padding: 48px 24px;
+	background: #f2f2f2;
+	text-align: center;
+	overflow: hidden;
+}
+footer > div {
+	max-width: 1080px;
+	margin: 0 auto;
+}
+footer > div > a {
+	display: block;
+	width: 100%;
+	max-width: 240px;
+	margin: 0 auto 48px auto;
+	text-decoration: none;
+}
+footer > div > a > img {
+	width: 100%;
+	/*max-width: 72px;*/
+}
+footer > div > a > span {
+	display: block;
+	margin: 0 0 12px 0;
+	color: #333;
+	font: 100 18px/24px Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+footer > div > section {
+	display: inline-block;
+	margin: 0 -.25em 0 0;
+	padding: 0px 0;
+	/*width: 33.33%;*/
+	font: 200 14px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #999;
+	vertical-align: top;
+	text-align: center;
+}
 
+footer > div > section.social {
+	padding: 0;
+	margin:  0 0 12px 0;
+	
+}
+footer > div > section.social > a {
+	padding: 0 12px;
+}
+footer > div > section.social > a > span {
+	font-size: 30px;
+	color: #fff;
+}
+footer > div > section.social > a:hover > span {
+	color: #d64336;
+}
+
+footer > div > p {
+	font: inherit;
+	color: inherit;
+	font:200 15px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 0px;
+	color: #999;
+}
+footer > div > p > span {
+	display: inline-block;
+	margin: 0 0 6px 0;
+	padding: 12px;
+	font-size: 16px;
+	font-weight: 200;
+	letter-spacing: 1px;
+	color: #fff;
+}
+
+
+footer > div > nav {
+	margin: 0 0 12px 0;
+}
+footer > div > nav > a {
+	padding: 0 6px;
+	font: 400 16px/16px  "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+footer > div > nav > a+a {
+	border-left: 1px solid #ccc;
+}
+footer > div > nav > a:hover {
+	color: #d64336;
+}
+
+
+footer > div > .contact-info {
+	position: relative;
+	max-width: 720px;
+	margin:0 auto 24px auto;
+}
+footer > div > .contact-info:after {
+	content: '\00a0';
+	position: absolute;
+	width: 320px;
+	height: 1px;
+	background: linear-gradient(to right, #f2f2f2 0%, #ccc 51.5%, #f2f2f2 100%) #ccc;
+	box-shadow: 0 1px #fff;
+	left: 50%;
+	bottom: -12px;
+	margin: 0 0 0 -160px;
+}
+footer > div > .contact-info > span {
+	display: inline-block;
+	text-align: center;
+	margin:  0 0 24px 0;
+	font: 400 16px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	opacity: .5;
+}
+footer > div > .contact-info > span > img {
+	width: 18px;
+	height: 18px;
+	margin: 0 6px 0 18px;
+	vertical-align: middle;
+}
+footer > div > .contact-info > span:first-of-type > img {
+	margin-left: 0;
+}
+
+
+
+
+footer > div > .state-licenses {
+	font: 200 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #999;
+}
+footer > div > .state-licenses > span {
+	display: inline-block;
+	padding: 12px;
+	text-align: center;
+}
+footer > div > .state-licenses > span > strong {
+	display: block;
+}
+footer > div > .state-licenses > span > strong > a {
+	font: inherit;
+	text-decoration: none;
+	text-transform: capitalize;
+	color: inherit;
+}
+
+
+
+
+footer > div > img {
+	display: inline-block;
+	max-width: 100px;
+}
+
+
+
+footer > div > .licenses {
+	/*max-width: 320px;*/
+	margin: 0 auto;
+	overflow: hidden;
+}
+footer > div > .licenses > img {
+	/*float: left;*/
+	max-height: 48px;
+	vertical-align: middle;
+	/*margin: 0 12px 0 0;*/
+}
+footer > div > .licenses > a {
+	display: inline-block;
+	margin: 0 24px;
+	padding: 24px 0;
+	font: 200 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: left;
+	vertical-align: middle;
+	text-decoration: none;
+}
+footer > div > .licenses > a > strong {
+	display: block;
+	margin: 0 12px 0 0;
+}
+/* @end */
 
 
 
@@ -3111,186 +3296,7 @@ article {
 
 
 
-/* @group FOOTER */
-footer {
-	width: 100%;
-	bottom: 0px;
-	left: 0;
-	padding: 48px 24px;
-	background: #f2f2f2;
-	text-align: center;
-	overflow: hidden;
-}
-footer > div {
-	max-width: 1080px;
-	margin: 0 auto;
-}
-footer > div > a {
-	display: block;
-	width: 100%;
-	max-width: 240px;
-	margin: 0 auto 48px auto;
-	text-decoration: none;
-}
-footer > div > a > img {
-	width: 100%;
-	/*max-width: 72px;*/
-}
-footer > div > a > span {
-	display: block;
-	margin: 0 0 12px 0;
-	color: #333;
-	font: 100 18px/24px Georgia, "Times New Roman", Times, serif;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-}
-footer > div > section {
-	display: inline-block;
-	margin: 0 -.25em 0 0;
-	padding: 0px 0;
-	/*width: 33.33%;*/
-	font: 200 14px/30px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #999;
-	vertical-align: top;
-	text-align: center;
-}
 
-footer > div > section.social {
-	padding: 0;
-	margin:  0 0 12px 0;
-	
-}
-footer > div > section.social > a {
-	padding: 0 12px;
-}
-footer > div > section.social > a > span {
-	font-size: 30px;
-	color: #fff;
-}
-footer > div > section.social > a:hover > span {
-	color: #d64336;
-}
-
-footer > div > p {
-	font: inherit;
-	color: inherit;
-	font:200 15px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	letter-spacing: 0px;
-	color: #999;
-}
-footer > div > p > span {
-	display: inline-block;
-	margin: 0 0 6px 0;
-	padding: 12px;
-	font-size: 16px;
-	font-weight: 200;
-	letter-spacing: 1px;
-	color: #fff;
-}
-
-
-footer > div > nav {
-	margin: 0 0 12px 0;
-}
-footer > div > nav > a {
-	padding: 0 6px;
-	font: 400 16px/16px  "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-}
-footer > div > nav > a+a {
-	border-left: 1px solid #ccc;
-}
-footer > div > nav > a:hover {
-	color: #d64336;
-}
-
-
-footer > div > .contact-info {
-	position: relative;
-	max-width: 720px;
-	margin:0 auto 24px auto;
-}
-footer > div > .contact-info:after {
-	content: '\00a0';
-	position: absolute;
-	width: 320px;
-	height: 1px;
-	background: linear-gradient(to right, #f2f2f2 0%, #ccc 51.5%, #f2f2f2 100%) #ccc;
-	box-shadow: 0 1px #fff;
-	left: 50%;
-	bottom: -12px;
-	margin: 0 0 0 -160px;
-}
-footer > div > .contact-info > span {
-	display: inline-block;
-	text-align: center;
-	margin:  0 0 24px 0;
-	font: 400 16px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	opacity: .5;
-}
-footer > div > .contact-info > span > img {
-	width: 18px;
-	height: 18px;
-	margin: 0 6px 0 18px;
-	vertical-align: middle;
-}
-footer > div > .contact-info > span:first-of-type > img {
-	margin-left: 0;
-}
-
-
-
-
-footer > div > .state-licenses {
-	font: 200 12px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: #999;
-}
-footer > div > .state-licenses > span {
-	display: inline-block;
-	padding: 12px;
-	text-align: center;
-}
-footer > div > .state-licenses > span > strong {
-	display: block;
-}
-
-
-
-
-footer > div > img {
-	display: inline-block;
-	max-width: 100px;
-}
-
-
-
-footer > div > .licenses {
-	/*max-width: 320px;*/
-	margin: 0 auto;
-	overflow: hidden;
-}
-footer > div > .licenses > img {
-	/*float: left;*/
-	max-height: 48px;
-	vertical-align: middle;
-	/*margin: 0 12px 0 0;*/
-}
-footer > div > .licenses > a {
-	display: inline-block;
-	margin: 0 24px;
-	padding: 24px 0;
-	font: 200 18px/24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	text-align: left;
-	vertical-align: middle;
-	text-decoration: none;
-}
-footer > div > .licenses > a > strong {
-	display: block;
-	margin: 0 12px 0 0;
-}
-/* @end */
 
 
 
