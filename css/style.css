@@ -556,6 +556,10 @@ footer > div > .contact-info > span > img {
 footer > div > .contact-info > span:first-of-type > img {
 	margin-left: 0;
 }
+footer > div > .contact-info > .address > span {
+	font: 300 14px/14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #666;
+}
 
 
 
@@ -613,6 +617,9 @@ footer > div > .licenses > a > strong {
 	display: block;
 	margin: 0 12px 0 0;
 }
+
+
+
 /* @end */
 
 
@@ -833,7 +840,7 @@ hgroup.video {
 
 
 
-@media all and (max-width: 720px) {
+@media all and (max-width: 960px) {
 .banner {
 	height: auto!important;
 	padding: 96px 0;
