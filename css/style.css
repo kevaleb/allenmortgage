@@ -488,9 +488,12 @@ footer > div > section.social > a:hover > span {
 footer > div > p {
 	font: inherit;
 	color: inherit;
-	font:200 15px/12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font:200 15px/17px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: 0px;
 	color: #999;
+}
+footer > div > p+p {
+	font-size: 12px;
 }
 footer > div > p > span {
 	display: inline-block;
