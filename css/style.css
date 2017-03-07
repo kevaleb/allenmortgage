@@ -337,13 +337,14 @@ header > div > nav {
 }
 header > div > nav > a {
 	margin: 0;
-	color: #fff;
+	padding: 0 0 0 24px;
+	color: #000;
 	border: 1px solid rgba(0,0,0,0);
 	display: block;
 	text-decoration: none;
 	font:200 18px/48px"Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-	color: rgba(255,255,255,.75);
 	letter-spacing: 1px;
+	text-align: left;
 }
 header > div > nav > a.selected {
 	font-weight: 400;
@@ -995,7 +996,7 @@ hgroup.video {
 /* @group Banner Two Column */
 
 .banner.two-column {
-	background-size: contain;
+	/*background-size: contain;*/
 	background-repeat: no-repeat;
 }
 .banner.two-column > hgroup {
@@ -1039,13 +1040,16 @@ hgroup.video {
 }
 .banner.two-column > section > h2 {
 	color: #fff;
-	font: 100 24px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 100 16px/36px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
 
 @media all and (max-width: 960px) {
-	
+
+.banner.two-column {
+	background-position: right;
+}	
 .banner.two-column > hgroup {
 	display: block;
 	max-width: 480px;

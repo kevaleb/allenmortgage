@@ -1,0 +1,123 @@
+---
+layout: default
+title: Free Mortgage Review
+description:
+navtitle: Mortgage Review
+navclass: /closing-costs/
+permalink: /closing-costs/
+---
+
+<div class="banner two-column" style="background-image: url('/images/banners/donna.jpg');">
+	<hgroup>
+		<!--<img src="/images/banners/2-months-no-payment.png" alt="" />-->
+		<h1>We Can Help You Refinance With No Closing Costs</h1>
+		<ul>
+			<li><i class="fa fa-check-circle-o" aria-hidden="true"></i>No Third Party Fees</li>
+			<li><i class="fa fa-check-circle-o" aria-hidden="true"></i>No Lender Fees</li>
+			<li><i class="fa fa-check-circle-o" aria-hidden="true"></i>No Title Fees</li>
+		</ul>
+	</hgroup>
+	
+	<section id="mortgage-review-form" class="">
+		<h2>Schedule a Free Mortgage Review</h2>
+		<form method="post" action="http://allenmortgage.com/thankyou.php">
+			<!--<input type="hidden" name="_to" value="kevin@truetakemedia.com">
+			<input type="hidden" name="_subject" value="New Request: Free Mortgage Review" />-->
+			<!--<input type="text" name="_gotcha" style="display: none;">-->
+			<input id="utm_source" type="hidden" name="utm_source" value="" />
+			<input id="utm_medium" type="hidden" name="utm_medium" value="" />
+			<input id="utm_campaign" type="hidden" name="utm_campaign" value="" />
+			<input id="utm_term" type="hidden" name="utm_term" value="" />
+			<input id="utm_content" type="hidden" name="utm_content" value="" />
+			
+			<label for="">
+				<span>Name</span>
+				<i class="fa fa-user" aria-hidden="true"></i>
+				<input type="text" name="name" value="" placeholder="Full Name" required/>
+			</label>
+			<label for="">
+				<span>Email</span>
+				<i class="fa fa-envelope" aria-hidden="true"></i>
+				<input type="email" name="email" value="" placeholder="Email" required/>
+			</label>
+			<label for="" class="phone">
+				<span>Phone</span>
+				<i class="fa fa-phone" aria-hidden="true"></i>
+				<input type="phone" name="phone" value="" placeholder="Phone #" id="phone" required/>
+			</label>
+			
+			<label>
+				<span>Preference</span>
+				<!--<div class="selected now">Call Me Now</div>-->
+				<div class="datetime"><span></span>Schedule A Call</div>
+				<div class="email"><span></span>Just Email Me</div>
+			</label>
+			
+			<label class="date">
+				<span>Date</span>
+				<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+				<input type="text" id="date" name="date"/>
+			</label>
+			<label class="time">
+				<span>Time</span>
+				<i class="fa fa-clock-o" aria-hidden="true"></i>
+				<input name="mortgage-review-time" type="text" value="" id="time" />
+			</label>
+			
+			
+			
+			<button class="button">Get My Free Mortgage Review</button>
+		</form>
+	</section>
+</div>
+
+<script type="text/javascript">
+	
+	
+	
+	$('#date').dateDropper();
+	$('#time').timeDropper();
+	
+	$( "#mortgage-review-form > form > label > div.datetime" ).click(function() {	
+		$('#mortgage-review-form > form > label > div.email.selected').removeClass('selected');
+		$('#mortgage-review-form').removeClass('email');
+		$('#mortgage-review-form').toggleClass('datetime');
+		$(this).toggleClass('selected');
+		$('input#phone').attr('required','required');
+	});
+	
+	$( "#mortgage-review-form > form > label > div.email" ).click(function() {
+		$('#mortgage-review-form > form > label > div.datetime.selected').removeClass('selected');
+		$('#mortgage-review-form').removeClass('datetime');
+		$('#mortgage-review-form').toggleClass('email');
+		$(this).toggleClass('selected');
+		
+		if ($('input#phone').attr('required')) {
+		        $('input#phone').removeAttr('required');
+		    } else {
+		        $('input#phone').attr('required','required');
+		    }
+	});
+	
+	$( "input#waist").change(function() {
+	  var waist = $('input#waist').val();
+	  $('.snipcart-add-item').data('item-custom2-value',waist);
+	  localStorage["ccs-waist-measurement"] = jQuery("input#waist").val();
+	});
+	
+	
+	
+	$(document).ready(function() {
+		$("#mortgage-review-form > form").validate();
+		
+		$('input#utm_source').val(persistentQueryString['utm_source']);
+		$('input#utm_medium').val(persistentQueryString['utm_medium']);
+		$('input#utm_campaign').val(persistentQueryString['utm_campaign']);
+		$('input#utm_term').val(persistentQueryString['utm_term']);
+		$('input#utm_content').val(persistentQueryString['utm_content']);
+	});
+</script>
+
+<script>
+
+</script>
