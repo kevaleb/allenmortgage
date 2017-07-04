@@ -1,0 +1,132 @@
+---
+layout: default
+title: Step 2
+description:
+navtitle: Mortgage Review
+navclass: /
+permalink: /step-2/
+---
+<div class="progress-banner">
+	<hgroup>
+		<h2>Step 2</h2>
+		<h1>Credit Score</h1>
+	</hgroup>
+	<div class="progress">
+		<span class="selected"><img src="/images/icons/home.svg" alt="" /></span>
+		<span class="selected"><img src="/images/icons/star.svg" alt="" /></span>
+		<span><img src="/images/icons/checkmark.svg" alt="" /></span>
+	</div>
+</div>
+<div id="mortgage-application" class="">
+	<hgroup>
+		<h2>Your credit score has a huge impact on how low your interest rate can be.</h2>
+	</hgroup>
+	<form method="post" action="/step-2/" class="pull_credit">
+		<input type="hidden" name="_to" value="kevin@truetakemedia.com">
+		<input type="hidden" name="_subject" value="New Request: Free Mortgage Review" />
+		<!--<input type="text" name="_gotcha" style="display: none;">-->
+		<input id="utm_source" type="hidden" name="utm_source" value="" />
+		<input id="utm_medium" type="hidden" name="utm_medium" value="" />
+		<input id="utm_campaign" type="hidden" name="utm_campaign" value="" />
+		<input id="utm_term" type="hidden" name="utm_term" value="" />
+		<input id="utm_content" type="hidden" name="utm_content" value="" />
+		
+		<!--<h3>Name</h3>
+		<h4>Primary Borrower</h4>
+		<input type="text" name="primary_borrower_name" value="" placeholder="First Last" id="phone" required/>-->
+		
+		<h3>How should we get your credit score?</h3>
+		<label id="pull_credit">
+			<input type="radio" name="credit_score_method" value="Free Credit Check" checked="checked"/>
+			<span><strong>Free Credit Pull</strong> - Most Accurate</span>
+		</label>
+		<label id="credit_range">
+			<input type="radio" name="credit_score_method" value="Credit Ranges" />
+			<span>Credit Ranges</span>
+		</label>
+		<label id="manual_credit">
+			<input type="radio" name="credit_score_method" value="Manual Entry" />
+			<span>Manual Entry</span>
+		</label>
+		
+		
+		
+		<h3 class="pull_credit">Date of Birth</h3>
+		<input type="date" name="date_of_birth" value="" class="pull_credit"/>
+		
+		<h3 class="pull_credit">Social Security Number</h3>
+		<input type="text" name="ssn" value="" class="pull_credit"/>
+		
+		
+		
+		<h3 class="credit_range">Credit Ranges</h3>
+		<label class="credit_range">
+			<input type="radio" name="credit_range" value="300-579" />
+			<span>300-579</span>
+		</label>
+		<label class="credit_range">
+			<input type="radio" name="credit_range" value="580-669" />
+			<span>580-669</span>
+		</label>
+		<label class="credit_range">
+			<input type="radio" name="credit_range" value="670-739" />
+			<span>670-739</span>
+		</label>
+		<label class="credit_range">
+			<input type="radio" name="credit_range" value="740-799" />
+			<span>740-799</span>
+		</label>
+		<label class="credit_range">
+			<input type="radio" name="credit_range" value="800-850" />
+			<span>800-850</span>
+		</label>
+		
+		
+		<h3 class="manual_credit">Enter Your Credit Score</h3>
+		<input type="number" name="manual_credit_score" value="" class="manual_credit"/>
+		
+		<br />
+		
+		<button class="button">Next Step</button>
+	</form>
+</div>
+
+<script type="text/javascript">
+	
+//	$( "#co-borrower-yes" ).click(function() {	
+//		$('#mortgage-application-form > form').toggleClass('borrower-yes');
+//	});
+	$( "#pull_credit" ).click(function() {	
+		$('#mortgage-application > form').removeClass();
+		$('#mortgage-application > form').addClass('pull_credit');
+	});
+	
+	$( "#credit_range" ).click(function() {	
+		$('#mortgage-application > form').removeClass();
+		$('#mortgage-application > form').addClass('credit_range');
+	});
+	
+	$( "#manual_credit" ).click(function() {	
+		$('#mortgage-application > form').removeClass();
+		$('#mortgage-application > form').addClass('manual_credit');
+	});
+	
+	
+	
+	
+	
+	$( "#co-borrower-no" ).click(function() {	
+		$('#mortgage-application > form').removeClass('borrower-yes');
+	});
+	
+	
+	$(document).ready(function() {
+		$("#mortgage-review-form > form").validate();
+		
+		$('input#utm_source').val(persistentQueryString['utm_source']);
+		$('input#utm_medium').val(persistentQueryString['utm_medium']);
+		$('input#utm_campaign').val(persistentQueryString['utm_campaign']);
+		$('input#utm_term').val(persistentQueryString['utm_term']);
+		$('input#utm_content').val(persistentQueryString['utm_content']);
+	});	
+</script>

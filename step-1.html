@@ -1,0 +1,126 @@
+---
+layout: default
+title: Step 1
+description:
+navtitle: Mortgage Review
+navclass: /
+permalink: /step-1/
+---
+<div class="progress-banner">
+	<hgroup>
+		<h2>Step 1</h2>
+		<h1>Your Home</h1>
+	</hgroup>
+	<div class="progress">
+		<span class="selected"><img src="/images/icons/home.svg" alt="" /></span>
+		<span><img src="/images/icons/star.svg" alt="" /></span>
+		<span><img src="/images/icons/checkmark.svg" alt="" /></span>
+	</div>
+</div>
+<div id="mortgage-application" class="">
+	<hgroup>
+		<h2>To accurately calculate your savings we need to know a little about your home.</h2>
+	</hgroup>
+	<form method="post" action="/step-2/" class="">
+		<input type="hidden" name="_to" value="kevin@truetakemedia.com">
+		<input type="hidden" name="_subject" value="New Request: Free Mortgage Review" />
+		<!--<input type="text" name="_gotcha" style="display: none;">-->
+		<input id="utm_source" type="hidden" name="utm_source" value="" />
+		<input id="utm_medium" type="hidden" name="utm_medium" value="" />
+		<input id="utm_campaign" type="hidden" name="utm_campaign" value="" />
+		<input id="utm_term" type="hidden" name="utm_term" value="" />
+		<input id="utm_content" type="hidden" name="utm_content" value="" />
+		
+		<!--<h3>Name</h3>
+		<h4>Primary Borrower</h4>
+		<input type="text" name="primary_borrower_name" value="" placeholder="First Last" id="phone" required/>-->
+		
+		<h3>Structure Type</h3>
+		<label class="standard_structure_type"><input type="radio" name="structure_type" value="Stick Framed" /><span>Standard (Stick Framed)</span></label>
+		<label class="standard_structure_type"><input type="radio" name="structure_type" value="Mobile Home" /><span>Mobile Home</span></label>
+		<label class="standard_structure_type"><input type="radio" name="structure_type" value="Condo" /><span>Condo</span></label>
+		<label id="other_structure_type"><input type="radio" name="structure_type" value="Other" /><span>Other</span></label>
+		
+		<h3 class="other_structure_type">What other type of structure is it?</h3>
+		<input type="text" name="other_structure_type" value="" class="other_structure_type"/>
+		
+		<h3>Property Address</h3>
+		<input type="text" name="property_address" value="" placeholder="Address"/>
+		<input type="text" name="property_city" value="" placeholder="City"/>
+		<input type="text" name="property_state" value="" placeholder="State"/>
+		<input type="text" name="property_zip" value="" placeholder="Zip"/>
+		
+		
+		
+		<!--<h3>Date of Birth</h3>
+		<h4>Primary Borrower</h4>
+		<input type="date" name="primary_borrower_birth_date" value="" />
+		
+		<h3>Social Security Number</h3>
+		<h4>Primary Borrower</h4>
+		<input type="text" name="primary_borrower_ssn" value="" />
+		
+		<h3>Do you have a co-borrower?</h3>
+		<label><input type="radio" name="co_borrower" value="true" id="co-borrower-yes" class="co-borrower-toggle"/><span>Yes</span></label>
+		<label><input type="radio" name="co_borrower" value="false" checked="checked" id="co-borrower-no" class="co-borrower-toggle"/><span>No</span></label>
+		
+		<h3 class="co-borrower">Name</h3>
+		<h4 class="co-borrower">Co-Borrower</h4>
+		<input  class="co-borrower" type="text" name="co_borrower_name" value="" placeholder="First Last" id="phone" required/>
+		
+		<h3 class="co-borrower">Date of Birth</h3>
+		<h4 class="co-borrower">Co-Borrower</h4>
+		<input class="co-borrower" type="date" name="co_borrower_birth_date" value="" />
+		
+		<h3 class="co-borrower">Social Security Number</h3>
+		<h4 class="co-borrower">Co-Borrower</h4>
+		<input class="co-borrower" type="text" name="co_borrower_ssn" value="" />-->
+		<br />
+		<button class="button">Next Step</button>
+	</form>
+</div>
+
+<script type="text/javascript">
+	
+//	$( "#co-borrower-yes" ).click(function() {	
+//		$('#mortgage-application-form > form').toggleClass('borrower-yes');
+//	});
+	$( "#other_structure_type" ).click(function() {	
+		$('#mortgage-application > form').addClass('other_structure_type');
+	});
+	
+	$( ".standard_structure_type" ).click(function() {	
+		$('#mortgage-application > form').removeClass();
+	});
+	
+	
+	$(document).ready(function() {
+		$("#mortgage-review-form > form").validate();
+		
+		$('input#utm_source').val(persistentQueryString['utm_source']);
+		$('input#utm_medium').val(persistentQueryString['utm_medium']);
+		$('input#utm_campaign').val(persistentQueryString['utm_campaign']);
+		$('input#utm_term').val(persistentQueryString['utm_term']);
+		$('input#utm_content').val(persistentQueryString['utm_content']);
+	});
+	
+	//	$( "#mortgage-review-form > form > label > div.email" ).click(function() {
+	//		$('#mortgage-review-form > form > label > div.datetime.selected').removeClass('selected');
+	//		$('#mortgage-review-form').removeClass('datetime');
+	//		$('#mortgage-review-form').toggleClass('email');
+	//		$(this).toggleClass('selected');
+	//		
+	//		if ($('input#phone').attr('required')) {
+	//		        $('input#phone').removeAttr('required');
+	//		    } else {
+	//		        $('input#phone').attr('required','required');
+	//		    }
+	//	});
+	//	
+	//	$( "input#waist").change(function() {
+	//	  var waist = $('input#waist').val();
+	//	  $('.snipcart-add-item').data('item-custom2-value',waist);
+	//	  localStorage["ccs-waist-measurement"] = jQuery("input#waist").val();
+	//	});
+	//	
+</script>

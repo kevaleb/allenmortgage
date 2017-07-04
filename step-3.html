@@ -1,0 +1,65 @@
+---
+layout: default
+title: Step 3
+description:
+navtitle: Mortgage Review
+navclass: /
+permalink: /step-3/
+---
+<div class="progress-banner">
+	<hgroup>
+		<h2>Step 3</h2>
+		<h1>Contact Info</h1>
+	</hgroup>
+	<div class="progress">
+		<span class="selected"><img src="/images/icons/home.svg" alt="" /></span>
+		<span class="selected"><img src="/images/icons/star.svg" alt="" /></span>
+		<span class="selected"><img src="/images/icons/checkmark.svg" alt="" /></span>
+	</div>
+</div>
+<div id="mortgage-application" class="">
+	<hgroup>
+		<h2>Where should we send your mortgage review?</h2>
+	</hgroup>
+	<form method="post" action="/thanks/" class="pull_credit">
+		<input type="hidden" name="_to" value="kevin@truetakemedia.com">
+		<input type="hidden" name="_subject" value="New Request: Free Mortgage Review" />
+		<!--<input type="text" name="_gotcha" style="display: none;">-->
+		<input id="utm_source" type="hidden" name="utm_source" value="" />
+		<input id="utm_medium" type="hidden" name="utm_medium" value="" />
+		<input id="utm_campaign" type="hidden" name="utm_campaign" value="" />
+		<input id="utm_term" type="hidden" name="utm_term" value="" />
+		<input id="utm_content" type="hidden" name="utm_content" value="" />
+		
+		<h3>Email</h3>
+		<input type="email" name="email" value="" />
+		
+		<h3>Would you like a loan officer to help explain the results? (FREE)</h3>
+		<label id="lo_explain_true">
+			<input type="radio" name="lo_explain" value="yes" />
+			<span>Yes Please</span>
+		</label>
+		<label id="lo_explain_false">
+			<input type="radio" name="lo_explain" value="no" checked="checked"/>
+			<span>No Thanks</span>
+		</label>
+		
+		<h3 class="lo_explain">Phone</h3>
+		<input type="phone" name="phone" value="" class="lo_explain"/>
+		
+		<br />
+		
+		<button class="button">Next Step</button>
+	</form>
+</div>
+
+<script type="text/javascript">
+	$( "#lo_explain_true" ).click(function() {	
+		$('#mortgage-application > form').removeClass();
+		$('#mortgage-application > form').addClass('lo_explain');
+	});
+	
+	$( "#lo_explain_false" ).click(function() {	
+		$('#mortgage-application > form').removeClass();
+	});
+</script>
