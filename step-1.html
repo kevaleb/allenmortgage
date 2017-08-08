@@ -77,7 +77,7 @@ permalink: /step-1/
 		<input class="co-borrower" type="text" name="co_borrower_ssn" value="" />-->
 		<br />
 		<button class="button">Next Step</button>
-		<p class="user_id">asdf</p>
+		<p id="user_id">asdf</p>
 	</form>
 </div>
 
@@ -96,7 +96,9 @@ permalink: /step-1/
 	
 	
 	
+	
 	$(document).ready(function() {
+		
 		$("#mortgage-review-form > form").validate();
 		
 		$('input#utm_source').val(persistentQueryString['utm_source']);
@@ -106,7 +108,8 @@ permalink: /step-1/
 		$('input#utm_content').val(persistentQueryString['utm_content']);
 		
 		var userid = heap.userId;
-		$('.user_id').html(userid);
+		var identity = heap.identity;
+		$('#user_id').html(userid);
 	});
 	
 	
